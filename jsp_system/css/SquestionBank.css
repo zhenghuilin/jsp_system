@@ -1,0 +1,34 @@
+#mainBody{
+    width:1155px;
+	margin-top:-20px;
+	overflow-x: hidden;
+}
+#leftBody{
+    width:200px;
+    text-align:center;
+    background:#ccc;
+    overflow:hidden;
+    float:left;
+    min-height:600px;
+}
+#leftBody ul li{
+	margin-left:-40px;
+	width:200px;
+    clear:both;
+	cursor:pointer;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    overflow:hidden;
+    background:#ccc;
+    line-height:56px;
+	text-decoration:none;
+}
+#rightBody{
+    width:955px;
+    background:#fff;
+    float:right;
+    min-height:560px;
+}
+#leftBody ul li.li1:hover {
+    filter: brightness(1.5);
+}

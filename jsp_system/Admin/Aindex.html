@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="zh">
+<head>
+	<!-- browser-sync start --server --files "." -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes" />
+	<title>ShineonuTaxWeb</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/flyPanels.css">
+	<link rel="stylesheet" href="../css/public_style.css">
+</head>
+<body data-debug="true">
+	<div class="flypanels-container preload">
+		<!-- 左侧菜单栏 -->
+		<div class="offcanvas flypanels-left">
+			<!-- <div id="topbar-title">
+				题库与考试系统
+			</div> -->
+			<div class="panelcontent" data-panel="treemenu">
+				<nav class="flypanels-treemenu" role="navigation">
+					<ul>
+						<li class="haschildren"><div><a href="AQuestionType.html" class="link"><i class="fa fa-gears leftbar-icon"></i>题库管理<span class="caret"></span></a></div>
+						</li>
+						<li class="haschildren"><div class="link"><a href="#" class="link"><i class="fa fa-bug leftbar-icon"></i>用户管理<span class="caret"></span></a> <a href="#" class="expand"><i class="fa icon"></i></a></div>
+							<ul>
+								<li><div><a href="ACharacter.html" class="link">角色管理</a></div></li>
+								<li><div><a href="AUserInfor.html" class="link">用户信息</a></div></li>
+								<li><div><a href="AUserCheck.html" class="link">用户审核</a></div></li>
+							</ul>
+						</li>
+						<li class="haschildren"><div class="link"><a href="AInfor.html" class="link"><i class="fa fa-wrench leftbar-icon"></i>个人信息<span class="caret"></span></a></div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<div class="flypanels-main">
+			<!-- 导航栏 -->
+			<div class="flypanels-topbar">
+				<a class="flypanels-button-left icon-menu" data-panel="treemenu" href="#"><i class="fa fa-bars"></i></a>
+				<div id="topbar-title">
+					题库与考试系统
+				</div>
+				<!-- 	<a class="flypanels-button-right icon-menu" data-panel="search" href="#"><i class="fa fa-search"></i></a> -->
+				<div class=" flypanels-topbar-news">
+					<a href="Aindex.html"></i>
+						欢迎：Admin</a>
+					<a href="login.html"><i class="fa fa-sign-out"></i>
+					退出</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="empty-div col-md-6"></div>
+			</div>
+			<div class="flypanels-content">
+			<!-- <div class="row"> -->				
+				<div class="container">
+  					<div id="container" style="height: 500px"></div>
+
+					<!--底部内容 -->
+					<div class="content-bottombar" style="margin-top:80px;">
+						<!-- <div class="row"> -->
+							<div class="bottom-link-parent">
+								<a href="#" class="bottom-link">帮助</a>
+								<a href="#" class="bottom-link">隐私</a>
+								<a href="#" class="bottom-link">条款</a>
+							</div>
+						<div class="row">
+							<div class="bottom-link-parent">copyright@2018 Shineonu体验技术部出品</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- flypanels-content  -->
+	</div>
+	
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/kitUtils.js"></script>
+	<script src="../dist/jquery.flypanels.js"></script>
+	<script src="../js/fastclick.min.js"></script>
+	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+	<!-- 图表 -->
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+   	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+   	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+   	<script type="text/javascript" src="js/index_graph.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.flypanels-container').flyPanels({
+				treeMenu: {
+					init: true
+				},
+				search: {
+					init: true,
+					saveQueryCookie: true
+				}
+			});
+			FastClick.attach(document.body);
+		});
+	</script>
+	<script type="text/javascript">
+		var dom = document.getElementById("container");
+		var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+		/*app.title = '坐标轴刻度与标签对齐';*/
+
+		option = {
+			title: {
+		        text: '最近7日在线人数情况表'
+		    },
+		    color: ['#3398DB'],
+		    tooltip : {
+		        trigger: 'axis',
+		        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+		        }
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : ['One', 'Twe', 'Three', 'Four', 'Five', 'Six', 'Seven'],
+		            axisTick: {
+		                alignWithLabel: true
+		            }
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'在线人数',
+		            type:'bar',
+		            barWidth: '60%',
+		            data:[80, 82, 100, 94, 90, 89,70]
+		        }
+		    ]
+		};
+		;
+		if (option && typeof option === "object") {
+		    myChart.setOption(option, true);
+		}
+       </script>
+</body>
+</html>

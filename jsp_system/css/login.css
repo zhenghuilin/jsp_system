@@ -1,0 +1,55 @@
+body{
+	background-image: url("../images/login_background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.form_login{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px 20px 10px 20px;
+}
+.form_center{
+	margin-top: 100px;
+}
+.login_title{
+	padding: 10px;
+}
+.user_input,.pwd_input{
+	margin-top: 10px;
+}
+.layui-input-block{
+	margin-left:0px;
+}
+.verify_code_input{
+	margin-top:10px;
+}
+#code{  
+    font-family:Arial;
+    font-style:italic;
+    font-weight:bold;
+    font-size: 15px;
+    width: 157px;
+    border:0;
+    letter-spacing:2px;  
+    color:blue;  
+    height: 38px;
+    padding: 0px 55px;
+    margin-bottom: 2px; 
+    border-radius: 5px;
+}
+.layui-input-block li{
+	display: inline-block;
+}
+.layui-btn{
+	width:350px; margin-top: 2px;
+}
+.layui-form button{
+	margin-top:10px;
+}
+#submit_code{
+	height: 38px;
+	background-color: #4a86e8;
+	color: #fff;
+	border:none;
+	width: 157px;
+}

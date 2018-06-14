@@ -1,0 +1,158 @@
+.flypanels-content{
+	height: 1000px;
+}
+.content-basesetting {
+	
+	margin-bottom: 20px;
+}
+.content-keywords {
+	
+	margin-bottom: 20px;
+}
+.content-repeat {
+	margin-bottom: 20px;
+}
+.content-object {
+	margin-bottom: 20px;
+}
+.content-box{
+	height: 320px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+}
+/*项目基础设置*/
+.basesetting-title {
+	height: 40px;
+	color: #2aaae9;
+	padding: 5px;
+	padding-top: 3px;
+	border-bottom: 1px dashed gray;
+	margin-bottom: 15px;
+}
+.basesetting-title h4{
+	width: 150px;
+}
+.basesetting-item{
+	margin: 10px 0 0 0;
+	padding-left: 5%;
+	flex-wrap: wrap;
+	display: flex;
+	height: 30px;
+}
+.basesetting-item-name{
+	line-height: 30px;
+	color: #000;
+	width: 20%;
+}
+.basesetting-item-name-small{
+	line-height: 30px;
+	color: #000;
+	width: 25%;
+}
+
+.basesetting-item-value {
+	width: 70%;
+}
+.basesetting-item-value-small {
+	width: 26%;
+}
+.basesetting-item-value-small2 {
+	width: 19%;
+}
+/* .basesetting-item-value-small input{
+	height: 28px;
+	width: 100%;
+} */
+.basesetting-item-value-small2 input{
+	height: 28px;
+	width: 100%;
+}
+.basesetting-item-value input{
+	height: 28px;
+	width: 100%;
+}
+.type-selector {
+	height: 28px;
+}
+/* 项目基础设置-采集内容 */
+.basesetting-collect-content{
+	margin: 10px 0 0 0;
+	padding-left: 5%;
+	flex-wrap: wrap;
+	display: flex;
+	height: 70px;
+}
+.basesetting-collect-content-right {
+	padding: 2%;
+	padding-left: 5%;
+	width: 70%;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.basesetting-collect-content-right p {
+	margin-right: 15%;
+	line-height: 20px;
+}
+/*搜索的关键词*/
+.content-keywords-list {
+	width: 90%;
+	margin-left: 5%;
+	margin-bottom: 10px;
+}
+.content-keywords-fromtxt {
+	display: flex;
+}
+.content-keywords-fromtxt-name {
+	margin-left: 5%;
+	width: 100px;
+	line-height: 25px;
+}
+.content-keywords-fromtxt-uri {
+	width: 55%;
+}
+.content-keywords-fromtxt-lookup{
+	margin-left: 5px;
+	width: 10%;
+}
+/*重复数据处理*/
+.content-repeat-list{
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin: 10px;
+	margin-top: 30px;
+}
+.content-repeat-list-item {
+	margin: 15px 10px 15px 10px;
+}
+/* 搜索对象 */
+.content-object-title {
+	margin-bottom: 30px;
+}
+.content-object-item {
+	margin-left: 5%;
+	margin-top: 15px;
+	padding: 5px;
+	background-color: #f2f2f2;
+	height: 65px;
+	width: 90%;
+}
+.content-object-item-type{
+	position: relative;
+	top: -8px;
+	left: 20px;
+	font-size: 16px;
+}
+.content-object-source > input{
+	margin-left: 5%;
+
+}
+/*底部导航*/
+.content-bottombar{
+	/*position: absolute;*/
+	position: relative;
+	bottom: -120px;
+}
